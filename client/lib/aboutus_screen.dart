@@ -73,7 +73,7 @@ class AboutUsScreen extends StatelessWidget {
                     gradient: LinearGradient(
                         begin: Alignment.topLeft,
                         end: FractionalOffset.bottomRight,
-                        colors: [Color(0xFF4FC3F7), Color(0xFFE1F5FE)])),
+                        colors: [Color(0xffA6E97C), Color(0xffF4F4F4)])),
                 child: Padding(
                     padding: const EdgeInsets.only(left: 10, right: 10),
                     child: Column(
@@ -81,26 +81,11 @@ class AboutUsScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           hsb(0.04),
-
-                          Container(
-                            height: deviceHeight*0.06,
-                            width: deviceWidth*0.95,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: const Color(0xFF01579B),
-                                width: 4
-                              ),
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'About Us',
-                                style: GoogleFonts.poppins(
-                                    fontSize: deviceWidth * 0.07,
-                                    fontWeight: FontWeight.bold,
-                                    color: const Color(0xFF01579B)),
-                              ),
-                            ),
+                          Text(
+                            'About Us',
+                            style: GoogleFonts.poppins(
+                                fontSize: deviceWidth * 0.1,
+                                color: const Color(0xff05483f)),
                           ),
                           hsb(0.02),
                           Text(
@@ -128,7 +113,7 @@ class AboutUsScreen extends StatelessWidget {
                                       style: GoogleFonts.poppins(
                                           fontSize: deviceWidth * 0.044,
                                           fontWeight: FontWeight.bold,
-                                          color: const Color(0xFF01579B))),
+                                          color: const Color(0xff05483f))),
                                   TextSpan(
                                     text:
                                         " (Assistant Professor, CSE Dept. SISTEC), ",
@@ -146,29 +131,8 @@ class AboutUsScreen extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-                          hsb(0.015),
-                          Container(
-                            height: deviceHeight*0.05,
-                            width: deviceWidth*0.95,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: const Color(0xFF01579B),
-                                  width: 4,
-                              ),
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Our Team',
-                                style: GoogleFonts.poppins(
-                                    fontSize: deviceWidth * 0.06,
-                                    fontWeight: FontWeight.bold,
-                                    color: const Color(0xFF01579B)),
-                              ),
-                            ),
-                          ),
-                          //h1Text('Our Team'),
-                          hsb(0.0001),
+                          hsb(0.03),
+                          h1Text('Our Team'),
                           GridView.count(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
@@ -200,21 +164,20 @@ class AboutUsScreen extends StatelessWidget {
                               ]),
                           Center(child: h2Text('6th Sem, CSE Dept. SISTEC GN')),
                           const Divider(),
-                          hsb(0.01),
-                          h3Text('View the source code on Github',),
-                         // hsb(0.01),
+                          hsb(0.04),
+                          h3Text('View the source code on Github'),
                           InkWell(
                               onTap: () => _visitUrl(
                                   'https://github.com/Dragsters/Nutrihelp'),
                               child: const Text(
                                 'https://github.com/Dragsters/Nutrihelp',
                                 style: TextStyle(
-                                    color: const Color(0xFF01579B),
+                                    color: Colors.blue,
                                     decoration: TextDecoration.underline),
                               )),
-                          hsb(0.001),
+                          hsb(0.03),
                           h3Text('Licence : MIT '),
-                          hsb(0.001),
+                          hsb(0.02),
                           h3Text(
                               'Report any Bug/Issue or a feature request at :'),
                           InkWell(
@@ -223,7 +186,7 @@ class AboutUsScreen extends StatelessWidget {
                               child: const Text(
                                 'https://github.com/Dragsters/Nutrihelp/issues',
                                 style: TextStyle(
-                                    color: const Color(0xFF01579B),
+                                    color: Colors.blue,
                                     decoration: TextDecoration.underline),
                               )),
                           hsb(0.1)
